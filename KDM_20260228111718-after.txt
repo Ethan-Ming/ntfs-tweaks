@@ -1,0 +1,23 @@
+                        KDiskMark (3.2.0): https://github.com/JonMagon/KDiskMark
+                    Flexible I/O Tester (fio-3.40): https://github.com/axboe/fio
+--------------------------------------------------------------------------------
+* MB/s = 1,000,000 bytes/s [SATA/600 = 600,000,000 bytes/s]
+* KB = 1000 bytes, KiB = 1024 bytes
+
+[Read]
+Sequential   1 MiB (Q=  8, T= 1):    42.001 MB/s [     41.0 IOPS] < 166474.22 us>
+Sequential   1 MiB (Q=  1, T= 1):    41.618 MB/s [     40.6 IOPS] <  4393.54 us>
+   Random   4 KiB (Q= 32, T= 1):     0.271 MB/s [     67.8 IOPS] < 435610.75 us>
+    Random   4 KiB (Q=  1, T= 1):     0.274 MB/s [     68.5 IOPS] < 14539.48 us>
+
+[Write]
+Sequential   1 MiB (Q=  8, T= 1):    40.386 MB/s [     39.4 IOPS] < 173703.95 us>
+Sequential   1 MiB (Q=  1, T= 1):    39.219 MB/s [     38.3 IOPS] <  1690.28 us>
+    Random   4 KiB (Q= 32, T= 1):     6.139 MB/s [   1534.9 IOPS] < 20167.63 us>
+    Random   4 KiB (Q=  1, T= 1):     4.107 MB/s [   1026.8 IOPS] <  1062.45 us>
+
+Profile: Default
+   Test: 1 GiB (x5) [Measure: 5 sec / Interval: 5 sec]
+   Date: 2026-02-28 11:17:34
+     OS: org.kde.Platform 6.9 [linux 6.18.7-200.nobara.fc43.x86_64]
+ Target: /run/media/sen/MAC 89% (1.17/1.31 TiB)

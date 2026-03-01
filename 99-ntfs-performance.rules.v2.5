@@ -1,0 +1,18 @@
+# 99-ntfs-performance.rules - v2.5 (Byte-Limited Cache)
+# 
+# Forces ntfs3 and sets hardware-level tuning for USB HDDs.
+# This version avoids UDISKS_MOUNT_OPTIONS to prevent "malformed option" errors.
+
+# 1. Force ntfs3 driver
+ACTION=="add", SUBSYSTEM=="block", ENV{ID_FS_TYPE}=="ntfs", ENV{ID_FS_TYPE}="ntfs3"
+
+# 2. Hardware Tuning (4MB Read-Ahead + mq-deadline)
+ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", \
+    ATTR{removable}=="1", \
+    ATTR{queue/read_ahead_kb}="4096", \
+    ATTR{queue/scheduler}="mq-deadline"
+
+ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]", \
+    ATTR{queue/rotational}=="1", \
+    ATTR{queue/read_ahead_kb}="4096", \
+    ATTR{queue/scheduler}="mq-deadline"
