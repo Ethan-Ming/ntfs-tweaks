@@ -1,0 +1,10 @@
+{
+   "filesystems": [
+      {
+         "source": "/dev/sdb1",
+         "target": "/run/media/sen/MAC",
+         "fstype": "ntfs3",
+         "options": "rw,noatime,uid=0,gid=0,windows_names,iocharset=utf8,prealloc"
+      }
+   ]
+}

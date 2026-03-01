@@ -1,0 +1,13 @@
+[1;33mStarting Balanced NTFS Performance Optimization (v3)...[0m
+Identifying mounted NTFS disks...
+Saving current configuration state to [0;32m/home/sen/Documents/ntfs-tweaks/ntfs_optimization_v3_state.json[0m...
+lsblk: /dev/sdb1: not a block device
+Skipping non-HDD/non-removable disk: /dev/sdb1
+
+[1;33mApplying permanent configuration files...[0m
+  - Aggressive Sync (Writeback) applied.
+  - Udev Performance Rules (HDD/Removable) applied.
+
+[0;32mBalanced NTFS Optimization v3 Complete![0m
+Targets: External USB Disks + Internal Mechanical HDDs.
+Features: bfq scheduler, 4MB Read-Ahead, Aggressive Sync (5s writeback).
